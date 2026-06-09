@@ -36,7 +36,7 @@ The system was trained using the **Poribohon-BD dataset** and achieved high clas
 | 🛺   | Rickshaw                  |
 | 🚕   | CNG                       |
 | 🏍️  | Bike                      |
-| 🚐   | Easy-bike (Auto Rickshaw) |
+| 🛺🇧🇩   | Easy-bike (Auto Rickshaw) |
 
 ---
 
