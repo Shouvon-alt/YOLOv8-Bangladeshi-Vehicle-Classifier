@@ -1,63 +1,115 @@
-# 🚦 YOLOv8-Bangladeshi-Vehicle-Classifier
+<div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue)
-![YOLOv8](https://img.shields.io/badge/YOLOv8-Nano-green)
-![Deep Learning](https://img.shields.io/badge/Deep-Learning-red)
-![Transfer Learning](https://img.shields.io/badge/Transfer-Learning-orange)
-![Research Project](https://img.shields.io/badge/Type-Research%20Project-purple)
+# 🚦 YOLOv8 Bangladeshi Vehicle Classifier
 
-## Overview
+### Transfer Learning Based Vehicle Classification for Bangladeshi Road Images
 
-YOLOv8-Bangladeshi-Vehicle-Classifier is a lightweight deep learning system developed for the classification of native Bangladeshi vehicles using transfer learning and the YOLOv8 Nano Classification architecture (YOLOv8n-cls).
+![Python](https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Nano-green?style=for-the-badge)
+![Accuracy](https://img.shields.io/badge/Top--1_Accuracy-98.38%25-success?style=for-the-badge)
+![Top-5](https://img.shields.io/badge/Top--5_Accuracy-100%25-brightgreen?style=for-the-badge)
+![Dataset](https://img.shields.io/badge/Dataset-Poribohon--BD-orange?style=for-the-badge)
+![Research](https://img.shields.io/badge/Type-Research%20Project-purple?style=for-the-badge)
 
-The model was trained on the Poribohon-BD dataset and is capable of recognizing common vehicle categories found on Bangladeshi roads. The objective of this project is to explore efficient vehicle classification techniques suitable for intelligent transportation systems, traffic monitoring, and edge-device deployment.
+Lightweight deep learning model for classifying native Bangladeshi vehicles using **YOLOv8 Nano Classification (YOLOv8n-cls)** and **Transfer Learning**.
 
----
-
-## Vehicle Classes
-
-The classifier recognizes six Bangladeshi vehicle categories:
-
-* Bus
-* Car
-* Rickshaw
-* Easy-bike (Auto Rickshaw)
-* CNG
-* Bike (Motorcycle)
+</div>
 
 ---
 
-## Dataset
+# 🌟 Project Overview
 
-**Dataset:** Poribohon-BD
+This project presents a lightweight vehicle classification system designed specifically for Bangladeshi road environments.
 
-The Poribohon-BD dataset contains images of native Bangladeshi vehicles collected under different environmental conditions, viewpoints, and lighting scenarios.
+Using the **YOLOv8 Nano Classification architecture (YOLOv8n-cls)** and transfer learning, the model learns to distinguish between six common vehicle categories found in mixed urban traffic.
 
----
-
-## Model Architecture
-
-| Specification            | Value          |
-| ------------------------ | -------------- |
-| Model                    | YOLOv8n-cls    |
-| Architecture Type        | Classification |
-| Parameters               | 1,442,566      |
-| Model Size               | ~3 MB          |
-| Computational Complexity | 3.3 GFLOPs     |
-| Input Resolution         | 224 × 224      |
+The system was trained using the **Poribohon-BD dataset** and achieved high classification accuracy while maintaining low computational requirements, making it suitable for real-time deployment and edge-device applications.
 
 ---
 
-## Performance Results
+# 🚗 Supported Vehicle Classes
 
-| Metric         | Score    |
+| Icon | Class                     |
+| ---- | ------------------------- |
+| 🚌   | Bus                       |
+| 🚗   | Car                       |
+| 🛺   | Rickshaw                  |
+| 🚕   | CNG                       |
+| 🏍️  | Bike                      |
+| 🚐   | Easy-bike (Auto Rickshaw) |
+
+---
+
+# 📂 Dataset Information
+
+### Dataset
+
+**Poribohon-BD**
+
+The dataset contains images of native Bangladeshi vehicles collected under:
+
+* Different lighting conditions
+* Different viewing angles
+* Urban and highway environments
+* Various weather conditions
+
+This diversity helps improve model generalization and robustness.
+
+---
+
+# 🧠 Model Architecture
+
+| Specification            | Value              |
+| ------------------------ | ------------------ |
+| Model                    | YOLOv8n-cls        |
+| Architecture Type        | Classification     |
+| Parameters               | 1,442,566          |
+| Model Size               | ~3 MB              |
+| Computational Complexity | 3.3 GFLOPs         |
+| Input Resolution         | 224 × 224          |
+| Framework                | Ultralytics YOLOv8 |
+
+---
+
+# ⚡ Inference Performance
+
+### Validation Speed
+
+| Process        | Time     |
 | -------------- | -------- |
-| Top-1 Accuracy | 98.38%   |
-| Top-5 Accuracy | 100.00%  |
-| Inference Time | 13.97 ms |
-| Estimated FPS  | 71.6 FPS |
+| Preprocessing  | 0.00 ms  |
+| Inference      | 13.97 ms |
+| Postprocessing | 0.00 ms  |
+| Total Latency  | 13.97 ms |
 
-### Validation Confusion Matrix
+### Real-Time Capability
+
+| Metric        | Value    |
+| ------------- | -------- |
+| Estimated FPS | 71.6 FPS |
+
+---
+
+# 📊 Performance Results
+
+| Metric            | Score        |
+| ----------------- | ------------ |
+| 🎯 Top-1 Accuracy | 98.38%       |
+| 🎯 Top-5 Accuracy | 100.00%      |
+| ⚡ Inference Time  | 13.97 ms     |
+| 🚀 Estimated FPS  | 71.6 FPS     |
+| 🧠 Parameters     | 1.44 Million |
+| 📦 GFLOPs         | 3.3          |
+
+---
+
+# 📈 Training Results
+
+### Training Curves
+
+![Results](assets/results.png)
+
+### Confusion Matrix
 
 ![Confusion Matrix](assets/confusion_matrix.png)
 
@@ -65,32 +117,47 @@ The Poribohon-BD dataset contains images of native Bangladeshi vehicles collecte
 
 ![Normalized Confusion Matrix](assets/confusion_matrix_normalized.png)
 
-### Validation Prediction Example
+---
 
-![Validation Prediction](assets/val_batch0_pred.jpg)
+# 🔍 Sample Prediction
+
+### Validation Prediction
+
+![Prediction](assets/val_batch0_pred.jpg)
 
 ---
 
-## Example Prediction
+# 🖼️ Example Inference
 
-Input Image:
+### Input Image
 
-![Test Image](assets/test_image.jpg)
+![Input Image](assets/test_image.jpg)
 
-```text
-test_image.jpg
-```
-
-Prediction:
+### Model Output
 
 ```text
-Class: CNG
+Prediction: CNG
 Confidence: 100.00%
 ```
 
+Example console output:
+
+```text
+image 1/1 test_image.jpg
+
+CNG 1.00
+Bus 0.00
+Easy-bike 0.00
+Bike 0.00
+Rickshaw 0.00
+
+Prediction:
+This is a CNG (100.00% confidence)
+```
+
 ---
 
-## Repository Structure
+# 🏗️ Repository Structure
 
 ```text
 YOLOv8-Bangladeshi-Vehicle-Classifier
@@ -119,16 +186,16 @@ YOLOv8-Bangladeshi-Vehicle-Classifier
 
 ---
 
-## Installation
+# 🚀 Installation
 
-Clone the repository:
+### Clone Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOLOv8-Bangladeshi-Vehicle-Classifier.git
 cd YOLOv8-Bangladeshi-Vehicle-Classifier
 ```
 
-Install dependencies:
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -136,44 +203,62 @@ pip install -r requirements.txt
 
 ---
 
-## Running Inference
+# ▶️ Running Inference
 
 ```bash
 python src/inference.py
 ```
 
-The script loads the trained model (`best.pt`) and predicts the vehicle category of a user-provided image.
+The script loads the trained model (`best.pt`) and predicts the class of a user-provided image.
 
 ---
 
-## Research Contribution
+# 🔬 Research Contribution
 
-This project demonstrates the effectiveness of transfer learning with lightweight deep neural networks for Bangladeshi vehicle classification. The trained YOLOv8 Nano model achieves high classification accuracy while maintaining low computational requirements, making it suitable for deployment on resource-constrained devices.
+This work demonstrates the effectiveness of transfer learning combined with a lightweight YOLOv8 Nano architecture for Bangladeshi vehicle classification.
+
+The model achieves:
+
+* High classification accuracy
+* Fast inference speed
+* Low computational complexity
+* Suitability for real-time deployment
+
+Potential application areas include:
+
+* Intelligent Transportation Systems (ITS)
+* Traffic Monitoring
+* Smart City Infrastructure
+* Edge AI Applications
+* Vehicle Analytics
 
 ---
 
-## Future Improvements
+# 🚀 Future Improvements
 
 * Increase the number of vehicle categories
-* Evaluate larger YOLOv8 variants
-* Deploy on edge devices such as Raspberry Pi and Jetson Nano
-* Integrate real-time video stream classification
-* Develop a complete intelligent traffic monitoring system
+* Train on larger Bangladeshi traffic datasets
+* Evaluate YOLOv8s, YOLOv8m and YOLOv8l variants
+* Deploy on Raspberry Pi and NVIDIA Jetson Nano
+* Support video stream classification
+* Integrate object detection and vehicle counting
 
 ---
 
-## Author
+# 👨‍💻 Author
 
-**Shouvon Deb**
+### Shouvon Deb
 
 Southeast University
 
 Department of Computer Science and Engineering
 
-Bangladesh
+Bangladesh 🇧🇩
+
+Research Project
 
 ---
 
-## License
+# 📄 License
 
 This project is licensed under the MIT License.
