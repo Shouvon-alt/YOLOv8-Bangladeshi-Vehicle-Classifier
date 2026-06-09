@@ -75,6 +75,8 @@ The Poribohon-BD dataset contains images of native Bangladeshi vehicles collecte
 
 Input Image:
 
+![Test Image](assets/test_image.jpg)
+
 ```text
 test_image.jpg
 ```
